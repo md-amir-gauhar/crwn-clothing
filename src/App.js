@@ -4,11 +4,10 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 const HatsPage = () => (
-  return (
-    <div>
-      <h1>Hats Page</h1>
-    </div>
-)
+
+  <div>
+    <h1>Hats Page</h1>
+  </div>
 )
 
 function App() {
