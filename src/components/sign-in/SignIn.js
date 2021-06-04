@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CustomButton from '../custom-button/CustomButton';
 import FormInput from '../form-input/FormInput';
 import './SignIn.scss';
+import { signInWithGoogle } from '../../firebase/firebase.util';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,6 @@ const SignIn = () => {
     e.preventDefault();
     setEmail("");
     setPassword("");
-    console.log(email, password);
   }
 
   return (
@@ -37,6 +37,7 @@ const SignIn = () => {
           handleChange={(e) => setPassword(e.target.value)}
         />
         <CustomButton type="submit">Sign In</CustomButton>
+        <CustomButton onClick={signInWithGoogle}>Sign In with Google</CustomButton>
       </form>
     </div>
   )
